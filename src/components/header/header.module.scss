@@ -1,0 +1,73 @@
+@import "../../styles/theme.scss";
+
+.navbar {
+  background-color: var(--primary-color) !important;
+  padding: 10px 20px;
+
+  .logo {
+    flex-grow: 1;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .navLinks {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+      display: none; 
+    }
+  }
+
+  .navItem {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    &.active {
+      background: white;
+      color: var(--primary-color);
+    }
+  }
+
+  .menuIcon {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.mobileMenu {
+  width: 250px;
+  padding: 20px;
+  background: var(--background-color);
+  height: 100%;
+
+  .closeButton {
+    float: right;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+
+    &:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+  }
+}
