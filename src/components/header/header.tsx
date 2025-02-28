@@ -23,7 +23,7 @@ const Header = () => {
     <>
       <AppBar position="static" className={styles.navbar}>
         <Toolbar>
-          <h1 className={styles.logo}>MyApp</h1>
+          <h1 className={styles.logo}>React+Vitest</h1>
 
           <div className={styles.navLinks}>
             <NavLink to="/" className={styles.navItem}>
