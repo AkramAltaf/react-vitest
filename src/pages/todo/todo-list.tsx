@@ -30,16 +30,20 @@ const TodoList: React.FC = () => {
       <TodoForm title={title} setTitle={setTitle} handleSubmit={handleSubmit} />
       <div className={styles.todoItems}>
         <h2>Todos</h2>
-        <ul>
-          {todos.map((todo) => (
-            <TodoItem
-              key={todo.id}
-              id={todo.id}
-              title={todo.title}
-              handleDelete={handleDelete}
-            />
-          ))}
-        </ul>
+        {todos.length === 0 ? (
+          <p className={styles.noTodosMessage}>There are no todos.</p>
+        ) : (
+          <ul>
+            {todos.map((todo) => (
+              <TodoItem
+                key={todo.id}
+                id={todo.id}
+                title={todo.title}
+                handleDelete={handleDelete}
+              />
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
