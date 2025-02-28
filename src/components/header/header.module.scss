@@ -1,14 +1,14 @@
 @use "../../styles/index" as *;
 
 .navbar {
-  background-color: var(--primary-color) !important;
-  padding: 10px 20px;
+  background-color: #1976d2;
+  padding: 0 20px;
 
   .logo {
     flex-grow: 1;
     font-size: 24px;
     font-weight: bold;
-    color: white;
+    color: var(--text-color);
   }
 
   .navLinks {
@@ -16,7 +16,7 @@
     gap: 20px;
 
     @media (max-width: 768px) {
-      display: none; 
+      display: none;
     }
   }
 
@@ -25,7 +25,7 @@
     text-decoration: none;
     font-weight: bold;
     padding: 8px 16px;
-    border-radius: 5px;
+    border-radius: $border-radius;
     transition: background 0.3s;
 
     &:hover {
@@ -52,6 +52,7 @@
   padding: 20px;
   background: var(--background-color);
   height: 100%;
+  box-shadow: $shadow;
 
   .closeButton {
     float: right;
@@ -63,7 +64,8 @@
     color: var(--text-color);
     padding: 10px;
     display: block;
-    border-radius: 5px;
+    border-radius: $border-radius;
+    transition: background 0.3s;
 
     &:hover {
       background: var(--primary-color);
