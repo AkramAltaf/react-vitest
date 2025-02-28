@@ -1,4 +1,4 @@
-@import "../../styles/theme.scss";
+@use "../../styles/index" as *;
 
 .navbar {
   background-color: var(--primary-color) !important;
