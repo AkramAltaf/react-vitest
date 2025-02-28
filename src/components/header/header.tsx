@@ -32,6 +32,9 @@ const Header = () => {
             <NavLink to="/todos" className={styles.navItem}>
               Todos
             </NavLink>
+            <NavLink to="/products" className={styles.navItem}>
+              Products
+            </NavLink>
           </div>
 
           <IconButton
@@ -64,6 +67,13 @@ const Header = () => {
               onClick={handleDrawerToggle}
             >
               <ListItemText primary="Todos" />
+            </ListItem>
+            <ListItem
+              component={NavLink}
+              to="/products"
+              onClick={handleDrawerToggle}
+            >
+              <ListItemText primary="Products" />
             </ListItem>
           </List>
         </div>
