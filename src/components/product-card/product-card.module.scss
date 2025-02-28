@@ -6,13 +6,21 @@
   box-shadow: var(--shadow);
   padding: 15px;
   width: 100%;
-  max-width: 300px;
-  text-align: center;
+  max-width: 250px;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &:hover {
     transform: scale(1.05);
   }
+}
+
+.productImg {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .image {
@@ -24,6 +32,9 @@
 }
 
 .info {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
   padding: 10px 0;
 }
 

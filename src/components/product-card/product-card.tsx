@@ -9,10 +9,12 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div className={styles.productCard}>
-      <img src={product.image} alt={product.title} className={styles.image} />
-      <div className={styles.info}>
+      <div className={styles.productImg}>
+        <img src={product.image} alt={product.title} className={styles.image} />
         <h3 className={styles.title}>{product.title}</h3>
-        <p className={styles.price}>${product.price.toFixed(2)}</p>
+      </div>
+      <div className={styles.info}>
+        <p className={styles.price}>Rs.{product.price.toFixed(2)}</p>
         <button className={styles.buyButton}>Buy Now</button>
       </div>
     </div>
